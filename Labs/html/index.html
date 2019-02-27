@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Descomponer Colores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="../js/imageProcessing.js"></script>
+</head>
+<body>
+    <p id="status">OpenCV is Loading ...</p>
+    <div id="input">
+        <div>
+            <label>Seleccione una Imagen:
+                    <input type="file" id="imgsrc" onchange="loadImage();"/>
+            </label>
+            
+        </div>
+        <div><img id="imagenOrigen" src="img_place_holder.jpg"></div>
+        <div>
+            <button onclick="HSVProcessing();">Descomponer HSV</button>
+            <button>Siguiente Componente</button>
+        </div>
+        
+        <canvas id="imRead"></canvas>
+    </div>
+    <div id="output">
+        <canvas id="imShow"></canvas>
+    </div>
+    <script>
+        function CVLoaded(){
+            document.getElementById("status").innerText="Open CV Loaded.";
+        }
+
+    </script>
+    <script src="../js/opencv.js" onload="CVLoaded();"></script>
+</body>
+</html>

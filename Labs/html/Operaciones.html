@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Operaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="../js/imageOperations.js"></script>
+</head>
+<body>
+    <p id="status">Loading OpenCV ...</p>
+    <div id="input">
+        <input type="file" id="img1">
+        <input type="file" id="img2">
+        <div>
+            <img src="" alt="No Image" id="image1" onchange="">
+            <p>Imagen 1</p>
+        </div>
+        <div>
+            <img src="" alt="No Image" id="image2" onchange="">
+            <p>Imagen 2</p>
+        </div>
+    </div>
+    <div id="output">
+        <canvas id="imShow"></canvas>
+    </div>
+    <script>
+        function CVLoaded(){
+            document.getElementById("status").innerText="Open CV Loaded.";
+        }
+
+    </script>
+    <script src="../js/opencv.js" onload="CVLoaded();"></script>
+</body>
+</html>
